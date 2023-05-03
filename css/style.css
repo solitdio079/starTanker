@@ -81,8 +81,37 @@
 /*** Navbar ***/
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(113, 113, 113, 0.5);
   color: #ffffff;
+}
+
+/*
+Underlay for carousel and breadcrumb
+*/
+
+.owl-carousel-item,
+.page-header {
+  position: relative;
+}
+
+.owl-carousel-item .img-fluid {
+  z-index: 0;
+}
+
+.owl-carousel-item .owl-carousel-inner,
+.page-header .container {
+  z-index: 2;
+}
+
+.owl-carousel-item .underlay,
+.page-header .underlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(113, 113, 113, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 .navbar.sticky-top {
